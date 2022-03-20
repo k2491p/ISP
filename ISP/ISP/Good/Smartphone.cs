@@ -5,7 +5,7 @@ using System.Text;
 namespace ISP.Good
 {
     // スマートフォン
-    public sealed class Smartphone : IMail, ICall, IApplication
+    public sealed class Smartphone : IMail, ICall, IApp
     {
         public void SendMail()
         {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ISP.Good
 {
-    interface IApplication
+    interface IApp
     {
         public void UseApp();
     }
