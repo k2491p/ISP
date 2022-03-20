@@ -1,0 +1,38 @@
+@startuml
+skinparam dpi 150
+
+'電話インターフェース
+interface IPhone {
+	+void SendMail()
+	+void Call()
+	+void UseApp()
+}
+
+'ポケベルクラス
+class Pager {
+	+void SendMail()
+	+void Call()
+	+void UseApp()
+}
+
+'ガラケークラス
+class FeaturePhone {
+	+void SendMail()
+	+void Call()
+	+void UseApp()
+}
+
+'スマートフォンクラス
+class Smartphone {
+	+void SendMail()
+	+void Call()
+	+void UseApp()
+}
+
+
+
+' クラス間の関係
+IPhone <|-- Pager
+IPhone <|-- FeaturePhone
+IPhone <|-- Smartphone
+@enduml
