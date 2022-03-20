@@ -1,0 +1,46 @@
+@startuml
+skinparam dpi 150
+
+'メールインターフェース
+interface IMail {
+	+void SendMail()
+}
+
+'電話インターフェース
+interface ICall {
+	+void Call()
+}
+
+'アプリインターフェース
+interface IApp {
+	+void UseApp()
+}
+
+'ポケベルクラス
+class Pager {
+	+void SendMail()
+}
+
+'ガラケークラス
+class FeaturePhone {
+	+void SendMail()
+	+void Call()
+}
+
+'スマートフォンクラス
+class Smartphone {
+	+void SendMail()
+	+void Call()
+	+void UseApp()
+}
+
+
+
+' クラス間の関係
+IMail <|-- Pager
+IMail <|-- FeaturePhone
+IMail <|-- Smartphone
+ICall <|-- FeaturePhone
+ICall <|-- Smartphone
+IApp <|-- Smartphone
+@enduml
